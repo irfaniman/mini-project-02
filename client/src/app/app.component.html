@@ -1,0 +1,66 @@
+<!-- <div class="main-container">
+    <div class="nav-container">
+        <ul>
+            <li><H3>Music Artist Search</H3></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Logout</a></li>
+            
+        </ul>
+    </div>
+    <div class="component-container">
+        <router-outlet></router-outlet>
+    </div>
+</div> -->
+
+<!-- <div class="container-fluid">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/predictscore" routerLinkActive="active">Predict Score</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/result" routerLinkActive="active">Results</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="logout" routerLinkActive="active">Logout</a>
+    </li>
+  </ul>
+</div> -->
+
+<!-- <nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">HotelVat</a>
+      </div>
+   -->
+  
+<!-- <mat-toolbar>
+    <span style="gradient-text:hover">Music Artist Search</span>
+    <ul>
+        <li>Home</li>
+        <li>Logout</li>
+    </ul>
+</mat-toolbar> -->
+
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="gradient-text">Music Artist Search</span>
+        <button routerLink="" mat-button>Home</button>
+        <button class="btn-text-left" [routerLink]="['/logout']" mat-button>Logout</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="component-container">
+    <router-outlet></router-outlet>
+</div>  
