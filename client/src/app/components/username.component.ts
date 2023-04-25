@@ -1,9 +1,11 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Username } from '../models';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { SongService } from '../song-service';
+import { Artist } from '../models';
 
 @Component({
   selector: 'app-username',
@@ -12,27 +14,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsernameComponent implements OnInit{
   
-  @Output()
-  onUsername = new Subject<Username>()
-  
   searchForm!: FormGroup
+  searchResult: any
 
-  constructor(private router: Router, private http: HttpClient, private fb: FormBuilder) {}
+  constructor(private router: Router, private http: HttpClient, private fb: FormBuilder, private songService: SongService) {}
 
   ngOnInit(): void {
-      this.searchForm = this.createForm()
+
   }
 
-  processForm() {
-    const username: Username = this.searchForm.value
-    console.info('username: ', username)
-    this.onUsername.next(username);
-    this.searchForm = this.createForm()
+  search() {
+    this.songService.get
+
   }
 
   private createForm(): FormGroup {
     return this.fb.group({
-      username: this.fb.control('')
+      username: this.fb.control<String>(''),
+      artistInput: this.fb.control<String>('', [ Validators.required ])
     })
   }
 }

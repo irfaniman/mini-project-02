@@ -22,7 +22,9 @@ export interface Albums {
     strDescriptionEN: string
 }
 
-export interface Username {
-    
+export interface Username { 
+   
     username: string
+    artistInput: string
+    artistID: string
 }

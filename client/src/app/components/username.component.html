@@ -1,33 +1,13 @@
-<form [formGroup]="searchForm" (ngSubmit)="processForm()">
+<div class="form-center" style="margin-top: 100px;">
+<form [formGroup]="searchForm" (ngSubmit)="search()">
   <table>
-        <div style="text-align: center;"><input type="text" placeholder="Username" formControlName="username"></div>
+        <input type="text" placeholder="Username" formControlName="username">
         <br>
-        <input type="text" class="form-control w-25 text-center" placeholder="Artist Name" formControlName="artist">
+        <br>
+        <input type="text" placeholder="Artist Name" formControlName="artistInput">
         <br><br>
-      <button mat-button [routerLink]="['/artist']">Submit</button>
+        <div style="text-align: center;"></div>
+      <button mat-raised-button color="primary" [routerLink]="['/artist']">Submit</button>
     </table>
 </form>
-
-
-<!-- <h4 class="gradient-text" style="text-align: center; margin-top: 35px;">You Have Been Logged Out!</h4>
-<div style="text-align:center" >
-    <button [routerLink]="['/artist']">Login</button>
 </div>
-<br> -->
-
-<!-- 
-<form [formGroup]="searchForm" (ngSubmit)="processForm()">
-  <div>
-    <input type="text" size="20" placeholder="Search text" formControlName="text">
-    <select formControlName="count">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="15">15</option>
-      <option value="20">20</option>
-      <option value="25">25</option>
-    </select>
-    <button type="submit" [disabled]="searchForm.invalid">
-      Search
-    </button>
-  </div>
-</form> -->
